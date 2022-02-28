@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <header class="border">
+      <h1 style="width:max-content">Charlie's Project</h1>
+      <h2 style="width:max-content">TBD</h2>    
+        <!-- <nav style="width:max-content">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+        </nav> -->
+      <button id="login_button" class="border" onclick="document.getElementById('login_modal').style.display='block'" style="width:auto;">Login</button>
+  </header>
+
+
+
+<div id="login_modal" class="modal">
+  <form class="modal-content animate border" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login_modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <!-- <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label> -->
+      <span class="create_account"><a href="#" onclick="document.getElementById('register_modal').style.display='block'; document.getElementById('login_modal').style.display='none'">Create an account</a></span>
+      <div class="container" style="background-color:cornflowerblue">
+        <button type="button" onclick="document.getElementById('login_modal').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </div>
+
+    
+  </form>
+</div>
+
+<div id="register_modal" class="modal">
+    <form class="modal-content animate border" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('register_modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+  
+      <div class="container">
+        <label class="input_margin" for="fname"><b>First Name</b></label>
+        <input class="input_margin" type="text" placeholder="Enter First Name" name="fname" required>
+
+        <label class="input_margin" for="lname"><b>Last Name</b></label>
+        <input class="input_margin" type="text" placeholder="Enter Last Name" name="lname" required>
+
+        <label class="input_margin" for="uname"><b>Username</b></label>
+        <input class="input_margin" type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label class="input_margin" for="psw"><b>Password</b></label>
+        <input class="input_margin" type="password" placeholder="Enter Password" name="psw" required>
+
+        <label class="input_margin" for="bdate"><b>Birthdate</b></label>
+        <input class="input_margin" type="date" placeholder="Enter Birthdate" name="bdate" required>
+          
+        <button type="submit">Register</button>
+        <div class="container" style="background-color:cornflowerblue">
+          <button type="button" onclick="document.getElementById('register_modal').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </div>
+  
+      
+    </form>
+  </div>
+</body>
+</html>

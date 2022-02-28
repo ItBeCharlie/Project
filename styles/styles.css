@@ -1,0 +1,267 @@
+:root {
+  --cancelRed: rgb(200, 0, 0);
+  --submitGreen: rgb(21, 182, 21);
+  --mainBlue: cornflowerblue;
+}
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+
+/* Set a style for all buttons */
+button {
+  background-color: var(--submitGreen);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: var(--cancelRed);
+}
+
+.create_account {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--mainBlue);
+  margin: 5% auto 15% auto !important; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  border-radius: 30px !important;
+  width: 20rem; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+form input {
+  background-color: #888;
+  color:#000;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+form input::placeholder, form input:invalid {
+  color: #333;
+}
+
+
+
+
+body {
+    margin: 0;
+    background-color: darkgrey;
+}
+
+header, footer{
+    background-color: var(--mainBlue);
+    color:slateblue;
+}
+
+header {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+p {
+    background-color: rgb(192, 202, 202);
+}
+
+#image-text {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: slateblue;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 5px;
+}
+
+h4 {
+    margin: 5px;
+}
+
+ul {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+a {
+    margin: 10px;
+}
+
+li {
+    margin: 10px 3px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: slateblue;
+}
+
+.header-box {
+    width: auto;
+}
+
+.border {
+    border: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: lightslategray;
+    margin: 5px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 50px 60px;
+    background-color: rgb(192, 202, 202);
+    margin: 5px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stagger {
+    margin-top: 150px;
+}
+
+.circle-bubbles {
+    display: flex;
+    justify-content: center;
+}
+
+.image-with-text {
+    display: flex;
+}
+
+.image-with-text p {
+    color: rgb(44, 44, 44);
+    font-size: 2em;
+}
+
+#login_button {
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5em;
+    background-color: var(--mainBlue);
+    color:slateblue;
+    font-weight: 900;
+}
+
+.input_margin {
+    margin: 1em 0 !important;
+}
