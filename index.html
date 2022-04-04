@@ -8,20 +8,22 @@
 </head>
 <body>
 
-  <header class="border">
-      <h1 style="width:max-content">Charlie's Project</h1>
-      <h2 style="width:max-content">TBD</h2>    
-        <!-- <nav style="width:max-content">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#shop">Shop</a></li>
-          </ul>
-        </nav> -->
-      <button id="login_button" class="border" onclick="document.getElementById('login_modal').style.display='block'" style="width:auto;">Login</button>
-  </header>
+	<header class="border">
+		<h1 style="width:max-content">Charlie's Project</h1> 
+			<nav style="width:max-content">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#shop">Shop</a></li>
+			</ul>
+			</nav>
+		<button id="login_button" class="border" onclick="document.getElementById('login_modal').style.display='block'" style="width:auto;">Login</button>
+	</header>
 
+<div id="canvasDiv">
+	<canvas id="canvas1"></canvas>
+</div>
 
 
 <div id="login_modal" class="modal">
@@ -83,5 +85,7 @@
       
     </form>
   </div>
+  <script src="script.js" type="module"></script>
+  
 </body>
 </html>
