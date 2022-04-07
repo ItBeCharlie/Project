@@ -1,37 +1,77 @@
-import {Vector} from './Vector.js'
-import {Engine} from './Engine.js'
-import {Runner} from './Runner.js'
+import { ListItem } from './components/ListItem.js';
 
-const canvas = document.getElementById('canvas1')
-const ctx = canvas.getContext('2d')
+class User {
+	constructor(fname, lname, uname, psw, bdate) {
+		this._fname = fname;
+		this._lname = lname;
+		this._uname = uname;
+		this._psw = psw;
+		this._bdate = bdate;
+	}
 
-canvas.width = document.getElementById('canvasDiv').clientWidth;
-canvas.height = document.getElementById('canvasDiv').clientHeight;
+	get fname() {
+		return this._fname;
+	}
 
-window.addEventListener('resize', function() {
-    canvas.width = document.getElementById('canvasDiv').clientWidth;
-    canvas.height = document.getElementById('canvasDiv').clientHeight;
-})
+	get lname() {
+		return this._lname;
+	}
 
-const engine = new Engine(0.0, canvas)
+	get uname() {
+		return this._uname;
+	}
 
-engine.addParticle(100, 100, 20, 100)
+	get psw() {
+		return this._psw;
+	}
 
-for(let i = 0; i < 8; i++)
-    engine.addParticle(400*(i/4+1)-300, 200*(i%2+1), (i*20)%60+20, (i*20)%60+20)
+	get bdate() {
+		return this._bdate;
+	}
 
-// for(let i = 0; i < 1000; i++)
-//     engine.addParticle(100, 200, 5, 5)
+	set fname(fname) {
+		this._fname = fname;
+	}
 
-engine.particles[0].player = true;
+	set lname(lname) {
+		this._lname = lname;
+	}
 
-engine.addWall(700, 200, 800, 400, 1)
+	set uname(uname) {
+		this._uname = uname;
+	}
 
-engine.addBorders()
+	set psw(psw) {
+		this._psw = psw;
+	}
 
-const runner = new Runner(engine, 60)
+	set bdate(bdate) {
+		this._bdate = bdate;
+	}
+}
 
-runner.start()
+document.getElementById('register-form').onsubmit = (e) => {
+	e.preventDefault();
+	const formData = new FormData(e.target);
+	const user = {
+		fname: formData.get('fname'),
+		lname: formData.get('lname'),
+		uname: formData.get('uname'),
+		psw: formData.get('psw'),
+		bdate: formData.get('bdate'),
+	};
 
-// runner.stop()
+	const u = new User(user.fname, user.lname, user.uname, user.psw, user.bdate);
+	console.log('AAA', u);
+};
 
+document.getElementById('login-form').onsubmit = (e) => {
+	e.preventDefault();
+	const formData = new FormData(e.target);
+	const user = {
+		uname: formData.get('uname'),
+		psw: formData.get('psw'),
+	};
+
+	console.log(user);
+};

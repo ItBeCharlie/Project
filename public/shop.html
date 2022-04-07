@@ -4,6 +4,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/shop.css" />
 		<title>Document</title>
 	</head>
 	<body>
@@ -21,10 +22,6 @@
 				Login
 			</button>
 		</header>
-
-		<div id="canvasDiv">
-			<canvas id="canvas1"></canvas>
-		</div>
 		<div id="login_modal" class="modal">
 			<form id="login-form" class="modal-content animate border" method="post">
 				<div class="imgcontainer">
@@ -40,8 +37,8 @@
 
 					<button type="submit">Login</button>
 					<!-- <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label> -->
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label> -->
 					<span class="create_account"
 						><a
 							href="#"
@@ -88,6 +85,15 @@
 				</div>
 			</form>
 		</div>
+
+		<div class="page-container">
+			<div id="items"></div>
+			<div id="cart">
+				<h1>Cart</h1>
+				<div id="cart-item-list"></div>
+			</div>
+		</div>
 		<script src="script.js" type="module"></script>
+		<script src="store.js" type="module"></script>
 	</body>
 </html>
